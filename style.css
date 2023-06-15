@@ -401,7 +401,7 @@ footer p {
   margin: 10px 0;
   border-radius: 5px;
 }
-.menu-mobile {
+.nav-bottom {
   display: none;
 }
 
@@ -509,13 +509,26 @@ footer p {
 
 @media screen and (max-width: 320px) {
   main {
-    padding: 0;
-    margin: 40px;
+    padding: 0 20px 0 20px;
+    /* margin: 40px; */
     width: 100%;
 
   }
   .left-social, .right-mail {
     display: none;
+  }
+  .nav-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+  }
+  .nav-bottom li {
+    list-style: none;
+  }
+  .nav-bottom a {
+    text-decoration: none;
+    color: #8892b0;
   }
 }
   
