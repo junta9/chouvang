@@ -31,13 +31,13 @@ main {
   position: relative;
 } */
 
-.presentation, .formation, #projets {
+.presentation, .formation, #about-me {
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.formation, .portfolio, #projets {
+.formation, #about-me {
   margin: 100px 0 0 100px;
 }
 
@@ -62,14 +62,14 @@ main {
   font-size: 40px;
   margin-bottom: 10px;
 }
-.presentation p {
+.presentation p, #about-me p {
   color: #8892b0;
   margin-top: 50px;
 }
 .formation {
   color: #8892b0;
 }
-.formation h2, #projets h2 {
+.formation h2, #projets h2, #about-me {
   color: #64ffda;
 }
 #nom {
@@ -277,10 +277,13 @@ header nav {
   font-size: 0.8em;
 }
 
-.left-social, .right-mail, .presentation, .formation  {
+.left-social, .right-mail, .presentation, .formation, #about-me  {
   /* animation: fixed-opa 1s ease-in 4.3s forwards; */
   animation: fixed-opa 1s ease-in forwards;
   opacity: 0;
+}
+#projets h2 {
+  text-align: center;
 }
 #portfolio {
   position: relative;
@@ -302,19 +305,18 @@ header nav {
   width: auto;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.586);
 }
-.projets {
+/* .projets {
   width: 100%;
   height: auto;
-  /* margin-right: 10px;
-  padding-right: 10px; */
   transform: rotateY(-50deg);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   z-index: 1;
-}
+} */
 .portfolio {
   display: flex;
+  justify-content: center;
 }
 .portfolio-content {
   opacity: 0.5;
@@ -325,7 +327,7 @@ header nav {
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  box-shadow: 1px 0px 2px rgb(23, 23, 23);
+  /* box-shadow: 1px 0px 2px rgb(23, 23, 23); */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.504);
   margin: 0 10px 0 0;
 }
@@ -404,6 +406,9 @@ footer p {
 .nav-bottom {
   display: none;
 }
+strong {
+  color: #64ffda;
+}
 
 @keyframes fixed-opa {
   0% {
@@ -451,7 +456,7 @@ footer p {
     margin: 200px 0 0 0;
     font-size: 0.8em;
   }
-  .formation {
+  .formation, #about-me {
     margin: 100px 0 0 0;
     font-size: 0.8em;
   }
