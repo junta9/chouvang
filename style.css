@@ -314,7 +314,7 @@ header nav {
   grid-template-rows: repeat(2, 1fr);
   z-index: 1;
 } */
-.portfolio {
+.portfolio, .projet {
   display: flex;
   justify-content: center;
 }
