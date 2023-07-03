@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Présentation</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.2"
+        integrity="sha384-L6OqL9pRWyyFU3+/bjdSri+iIphTN/bvYyM37tICVyOJkWZLpP2vGn6VUEXgzg6h"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,13 +22,13 @@
                 <clipPath id="clip-path">
                     <path id="Tracé_1_-_Contour" data-name="Tracé 1 - Contour"
                         d="M-51.443-89.1H51.443L102.887,0,51.443,89.1H-51.443L-102.887,0Zm100,5H-48.557L-97.113,0l48.557,84.1H48.557L97.113,0Z"
-                        transform="translate(499 381) rotate(90)" fill="none" stroke="#64ffda" stroke-width="5" />
+                        transform="translate(499 381) rotate(90)" fill="none" stroke="#64ffda" stroke-width="20" />
                 </clipPath>
             </defs>
             <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" transform="translate(-409.897 -278.113)"
                 clip-path="url(#clip-path)">
                 <path id="Tracé_1" data-name="Tracé 1" d="M100,0,50,86.6H-50L-100,0l50-86.6H50Z"
-                    transform="translate(499 381) rotate(90)" fill="none" stroke="#64ffda" stroke-width="5" />
+                    transform="translate(499 381) rotate(90)" fill="none" stroke="#64ffda" stroke-width="20" />
             </g>
         </svg>
     </section>
@@ -42,15 +45,22 @@
                         </text>
                     </svg></a>
             </div>
-            <div class="menu">
+            <div class="menu-desktop">
                 <ol>
-                    <li><a href="#aboutme">A propos</a></li>
-                    <li><a href="#formation">Expériences</a></li>
-                    <li><a href="#projets">Projets</a></li>
+                    <li><a
+                        hx-target="#response-div"
+                        hx-get="projets.html"
+                        hx-swap="outerHTML" 
+                        href="#">Projets</a></li>
+                    <li><a
+                        hx-target="#response-div"
+                        hx-get="about.html"
+                        hx-swap="outerHTML"
+                        href="#">A propos de moi</a></li>
                     <li><a href="mailto:vangchou@outlook.fr">Contact</a></li>
                 </ol>
             </div>
-            
+
             <div class="button-resume">
                 <a href="./assets/CV.pdf" download>Resume</a>
             </div>
@@ -60,15 +70,15 @@
         <div class="left-social">
             <ul>
                 <li>
-                    <a href="https://github.com/junta9"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a8b2d1"
-                            class="bi bi-github" viewBox="0 0 16 16">
+                    <a href="https://github.com/junta9"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="#a8b2d1" class="bi bi-github" viewBox="0 0 16 16">
                             <path
                                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                         </svg></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/chou-vang-pro/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a8b2d1"
-                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <a href="https://www.linkedin.com/in/chou-vang-pro/"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="#a8b2d1" class="bi bi-linkedin" viewBox="0 0 16 16">
                             <path
                                 d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
                         </svg></a>
@@ -83,145 +93,36 @@
                 <h1>Salut, je m'appelle</h1>
                 <h2>Chou VANG</h2>
                 <h3>Je suis Développeur Web et Applications</h3>
-                <!-- <p>Je suis étudiant en Développement d'applications web et multimédia</p> -->
             </div>
         </section>
-        <section id="about-me">
-            <div>
-                <h2>A propos de moi</h2>
-                <p>En <strong>2021</strong> j'ai pris la décision de me reconvertir dans le domaine de l'informatique, qui est ma première passion.
-                    <br><br> J'ai donc entamé une formation professionnelle axée sur les <strong>systèmes et les réseaux</strong>, et j'ai obtenu un <strong>titre professionnel</strong> dans ce domaine.
-                    <br><br> Pendant cette formation, j'ai découvert le monde du script et du développement web, ce qui m'a conduit à entreprendre une autre formation en <strong>Développement Web et Applications Multimédia</strong>.
-                    <br><br> Grâce à ces formations, j'ai acquis des compétences solides en programmation et en conception de sites web.
-                    <br><br> J'ai également eu l'opportunité de travailler sur des <strong>projets concrets</strong>, ce qui m'a permis de mettre en pratique mes connaissances et de perfectionner mes compétences.
-                    <br><br> Au fil de ma formation, j'ai réalisé que le développement web représentait bien plus qu'une simple passion pour moi.
-                    <br><br> C'est devenu une véritable vocation. J'apprécie la créativité et les défis que ce domaine offre, ainsi que la possibilité de créer des solutions interactives et innovantes.
-                    <br><br> J'ai également découvert le framework <strong>Symfony</strong>, qui m'a permis de développer des applications web puissantes et flexibles.
-                    <br><br> La programmation en PHP et l'utilisation de Symfony me procurent une grande satisfaction, car cela me permet de concevoir des projets solides et efficaces.
-                    <br><br> Aujourd'hui, je suis prêt à mettre mes compétences et ma passion au service d'une <strong>entreprise</strong> ou d'un <strong>projet</strong> qui me permettra de continuer à évoluer dans le domaine du développement web.
-                    <br><br> Je suis <strong>motivé</strong> à apprendre de nouvelles technologies et à relever de nouveaux défis, car je suis convaincu que l'informatique est un domaine en constante évolution qui offre des opportunités infinies.
-                    <!-- <br><br> Je suis fier des progrès que j'ai réalisés jusqu'à présent et j'ai hâte de poursuivre mon développement en tant que développeur web professionnel.
-                    <br><br> Je suis ouvert aux nouvelles <strong>collaborations</strong> et aux opportunités qui se présentent, et je suis certain que ma passion et mon dévouement me permettront de réussir dans ce domaine passionnant.
-                    <br><br> En résumé, ma reconversion dans l'informatique en 2021 m'a permis de découvrir ma véritable passion pour le développement web et de développer des compétences solides en systèmes, réseaux et programmation.
-                    <br><br> Je suis déterminé à poursuivre ma <strong>carrière</strong> en tant que développeur web et à contribuer à la création de projets innovants et fonctionnels.</p> -->
-
-            </div>
-        </section>
-        <section class="formation" id="formation">
-            <div>
-                <h2>Ma formation</h2>
-                <!-- <div>
-                    <h3>Concepteur Développeur d'Application spéc Python</h3>
-                    <p>2023 - 2023</p>
-                    <p>Studi</p>
-                </div> -->
-                <div>
-                    <h3>Développeur Web et d'Application Multimédia</h3>
-                    <p>2022 - 2023</p>
-                    <p>Philiance - Evry</p>
-                </div>
-                <div>
-                    <h3>Téchnicien supérieur en systèmes et réseaux</h3>
-                    <p>2019 - 2021</p>
-                    <p>Nextformation - Paris</p>
-                </div>
-            </div>
-            <div class="stage">
-                <h2>Experiences professionnelles</h2>
-                <div class="stage-content">
-                    <h3>Stagaire Developpeur PHP Prestashop</h3>
-                    <p>eboutiquefacile</p>
-                    <p>mars 2023 - mai 2023</p>
-                    <ul>
-                        <li>Développement de modules et de fonctionnalités selon cahier des charges</li>
-                        <li>Recherche et résolutions de bugs Front et Back</li>
-                    </ul>
-                </div>
-                <div class="stage-content">
-                    <h3>Stagaire Technicien support informatique</h3>
-                    <p>Sleever - Morangis</p>
-                    <p>septembre 2021 - novembre 2021</p>
-                    <ul>
-                        <li>Assister les utilisateurs sur site.</li>
-                        <li>Maintenir, exploiter et sécuriser une infrastructure
-                            centralisée.</li>
-                        <li>Automatisation de taches via script Powershell et
-                            bash.</li>
-                    </ul>
-                </div>
-                <div class="stage-content">
-                    <h3>Cariste - Préparateur palettes</h3>
-                    <p>ECF Group - Grigny</p>
-                    <p>septembre 2010 - decembre 2021</p>
-                    <ul>
-                        <li>Préparation des commandes provenant d’un convoyeur
-                            automatisé vers les zones de rangements avec un engin
-                            de catégories CACES 5.</li>
-                    </ul>
-                </div>
-                <div class="stage-content">
-                    <h3>Téléconseiller multimédia</h3>
-                    <p>CENTRAPEL - Paris</p>
-                    <p>decembre 2006 - juin 2007</p>
-                    <ul>
-                        <li>Résolution des problèmes techniques de clients Free.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- <section id="projets">
-            <h2>Projets</h2>
-            <div>
-                <div class="card">
-                    <a href="https://mondoudou.org"><img src="./images/mondoudou/accueil-desktop.PNG" alt="accueil-mondoudou"></a>
-                </div>
-            </div>
-        </section> -->
-        <section id="projets">
-            <h2>Projets réalisés</h2>
-            <div class="projet">
-              <article class="portfolio-content" id="Mondoudou"><a href="https://mondoudou.org" target="_blank"><img
-                    src="./images/mondoudou/accueil-desktop.PNG" alt="">Mondoudou</a></article>
-              <article class="portfolio-content" id="Tribeshomestay"><a href="http://tribeshomestay.fr/" target="_blank"><img
-                    src="./images/tribeshomestay/tribeshomestay-accueil-desktop.png" alt="">TribesHomestay</a></article>
-            </div>
-        </section>
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio">
-              <article class="portfolio-content" id="Permaculture"><a href="https://junta9.github.io/Permaculture/" target="_blank"><img
-                    src="./images/permaculture/main.jpg" alt="">Permaculture</a></article>
-              <article class="portfolio-content" id="Clos-Marsault"><a href="https://junta9.github.io/Clos-Maursault/"
-                  target="_blank"><img src="./images/clos-maursault/image-principale.JPG" alt="">
-                  Clos-Marsault</a></article>
-              <!-- <article class="portfolio-content" id="Einstein"><a href="https://junta9.github.io/Einstein/index.html"
-                  target="_blank"><img src="./images/einstein/Albert_Einstein_1947.jpg" alt=""> Einstein</a>
-              </article> -->
-              <article class="portfolio-content" id="Station-F"><a href="https://junta9.github.io/projet-Station-F/" target="_blank"><img
-                    src="./images/station-f/home.jpg" alt="">Station-F</a></article>
-            </div>
-        </section>
-        <!-- <section class="contact">
-            <h2>Contact</h2>
-            <form action="#" method="POST">
-                <input type="text" id="email" name="email" placeholder="Enter your e-mail" required>
-                <textarea name="content" id="content" cols="50" rows="10" placeholder="Enter your message" required></textarea>
-                <input class="send" type="submit" value="Envoyer" name="envoyer">
-            </form>
-        </section> -->
+        <div class="menu-mobile">
+            <ul>
+                <li><a
+                    hx-target="#response-div"
+                    hx-get="projets.html"
+                    hx-swap="outerHTML" 
+                    href="#">Projets</a></li>
+                <li><a
+                    hx-target="#response-div"
+                    hx-get="about.html"
+                    hx-swap="outerHTML"
+                    href="#">A propos de moi</a></li>
+            </ul>
+        </div>
+        <div id="response-div"></div>
         <footer>
             <div>
                 <ul class="nav-bottom">
                     <li>
-                        <a href="https://github.com/junta9"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a8b2d1"
-                                class="bi bi-github" viewBox="0 0 16 16">
+                        <a href="https://github.com/junta9"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="#a8b2d1" class="bi bi-github" viewBox="0 0 16 16">
                                 <path
                                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                             </svg></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/chou-vang-pro/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a8b2d1"
-                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <a href="https://www.linkedin.com/in/chou-vang-pro/"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="#a8b2d1" class="bi bi-linkedin" viewBox="0 0 16 16">
                                 <path
                                     d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
                             </svg></a>
@@ -232,6 +133,7 @@
             <p>Created by Chou VANG</p>
         </footer>
     </main>
+
     <script src="script.js"></script>
 </body>
 

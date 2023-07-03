@@ -44,6 +44,9 @@ main {
 .formation h2, .formation div, #projets h2, #projets div {
   margin-bottom: 50px;
 }
+#projets {
+  margin-top: 100px;
+}
 .presentation-content {
   margin: 200px 0 0 100px;
 }
@@ -153,37 +156,37 @@ header nav {
   animation: translateY 1s 4.4s ease-in forwards;
 
 }
-.menu {
+.menu-desktop {
   color: #64ffda;
   width: 100%;
   display: flex;
   align-items: center;
 }
-.menu ol {
+.menu-desktop ol {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   font-size: 0.8em;
 }
-.menu li a {
+.menu-desktop li a {
   color: #a8b2d1;
   text-decoration: none;
 }
-.menu li a:hover {
+.menu-desktop li a:hover {
   color: #64ffda;
 }
-.menu li {
+.menu-desktop li {
   margin-left: 30px;
   margin-right: 30px;
 }
-.menu li:nth-child(1) {
+.menu-desktop li:nth-child(1) {
   position: relative;
   top: -100px;
   /* transform: translateY(100px);
   transition: transform 0.5s 4s ease; */
   animation: translateY 1s 4s ease-in forwards;
 }
-.menu li:nth-child(2) {
+.menu-desktop li:nth-child(2) {
   position: relative;
   top: -100px;
   /* transform: translateY(100px);
@@ -191,7 +194,7 @@ header nav {
   animation: translateY 1s 4.1s ease-in forwards;
 
 }
-.menu li:nth-child(3) {
+.menu-desktop li:nth-child(3) {
   position: relative;
   top: -100px;
   /* transform: translateY(100px);
@@ -199,7 +202,7 @@ header nav {
   animation: translateY 1s 4.2s ease-in forwards;
 
 }
-.menu li:nth-child(4) {
+.menu-desktop li:nth-child(4) {
   position: relative;
   top: -100px;
   /* transform: translateY(100px);
@@ -216,6 +219,26 @@ header nav {
   }
 }
 /* ****************Fin du menu animation************* */
+
+.menu-mobile {
+  /* display: none; */
+  margin-top: 50px;
+}
+.menu-mobile ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu-mobile ul li {
+  list-style: none;
+}
+.menu-mobile ul li a {
+  text-decoration: none;
+  color: #64ffda;
+  font-size: 0.8em;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #64ffda;
+}
 
 .left-social {
   width: 40px;
@@ -277,7 +300,7 @@ header nav {
   font-size: 0.8em;
 }
 
-.left-social, .right-mail, .presentation, .formation, #about-me  {
+.left-social, .right-mail, .presentation, .formation, .menu-mobile {
   /* animation: fixed-opa 1s ease-in 4.3s forwards; */
   animation: fixed-opa 1s ease-in forwards;
   opacity: 0;
@@ -445,7 +468,7 @@ strong {
 }
 
 @media screen and (max-width: 768px) {
-  .portfolio {
+  .portfolio, .projet {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -460,7 +483,7 @@ strong {
     margin: 100px 0 0 0;
     font-size: 0.8em;
   }
-  .menu {
+  .menu-desktop {
     font-size: 0.8em;
   }
 }
@@ -474,7 +497,7 @@ strong {
   main {
     padding: 0 80px;
   }
-  .menu {
+  .menu-desktop {
     visibility: hidden;
     display: none!important;
   }
