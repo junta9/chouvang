@@ -261,6 +261,13 @@ header nav {
   background-color: #64ffda;
   color: gray!important;
 }
+#projets, #portfolio, #about-me, #formation{
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+@keyframes fade-in {
+  0% { opacity:0;}
+  100% { opacity:1;}
+}
 
 .left-social {
   width: 40px;
