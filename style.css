@@ -239,6 +239,9 @@ header nav {
   border-radius: 5px;
   border: 1px solid #64ffda;
 }
+#respose-div {
+  min-height: 30vh;
+}
 
 .left-social {
   width: 40px;
