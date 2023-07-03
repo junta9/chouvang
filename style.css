@@ -303,7 +303,7 @@ header nav {
   font-size: 0.8em;
 }
 
-.left-social, .right-mail, .presentation, .formation, .menu-mobile {
+.left-social, .right-mail, .presentation, .formation, .menu-mobile, footer {
   /* animation: fixed-opa 1s ease-in 4.3s forwards; */
   animation: fixed-opa 1s ease-in forwards;
   opacity: 0;
