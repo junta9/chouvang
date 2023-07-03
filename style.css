@@ -548,13 +548,19 @@ strong {
     justify-content: center;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .formation,
   #about-me {
     margin: 100px 50px 0 50px;
   }
   .presentation-content {
     margin: 200px 0 0 50px;
+  }
+  .portrait {
+    margin-right: 50px;
+  }
+  .portrait img {
+    width: 900px;
   }
 }
 
