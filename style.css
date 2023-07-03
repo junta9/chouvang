@@ -31,7 +31,12 @@ main {
   position: relative;
 } */
 
-.presentation, .formation, #about-me {
+.presentation {
+  display: flex;
+  align-items: flex-end;
+}
+
+.formation, #about-me {
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -48,7 +53,7 @@ main {
   margin-top: 100px;
 }
 .presentation-content {
-  margin: 200px 0 0 100px;
+  margin: 200px 0 0 50px;
 }
 .presentation h1 {
   color: #64ffda;
@@ -219,10 +224,20 @@ header nav {
   }
 }
 /* ****************Fin du menu animation************* */
-
+.portrait {
+  margin-right: 100px;
+}
+.portrait img {
+  height: 620px;
+  width: 400px;
+  max-width: 100%;
+	height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
 .menu-mobile {
   /* display: none; */
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .menu-mobile ul {
   display: flex;
@@ -241,6 +256,10 @@ header nav {
 }
 #response-div {
   min-height: 30vh;
+}
+.active {
+  background-color: #64ffda;
+  color: gray!important;
 }
 
 .left-social {
@@ -478,9 +497,17 @@ strong {
   .portfolio, .contact {
     margin: 0;
   }
+  .presentation {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   .presentation-content {
-    margin: 200px 0 0 0;
+    margin: 50px 0 0 0;
     font-size: 0.8em;
+  }
+  .portrait {
+    margin-top: 50px;
+    margin-right: 0;
   }
   .formation, #about-me {
     margin: 100px 0 0 0;
