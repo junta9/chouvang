@@ -106,7 +106,6 @@ main {
   transform: translate(-50%, -50%);
   animation: logo-opa 0.2s ease-in 3.5s forwards;
 }
-
 .icone path:nth-child(1) {
   /* ******************Creation du dasharray*************** */
   stroke-dasharray: 600px;
@@ -541,7 +540,7 @@ strong {
     font-size: 0.8em;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .formation {
     justify-content: center;
   }
