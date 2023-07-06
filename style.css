@@ -235,6 +235,12 @@ header nav {
   height: auto;
   border-radius: 20px;
   object-fit: cover;
+  opacity: 0.3;
+}
+.portrait img:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 10px #64ffda;
+  transition: all 0.5s ease-in-out;
 }
 .menu-mobile {
   /* display: none; */
@@ -334,6 +340,11 @@ header nav {
   margin: 20px auto;
   padding: 10px;
   font-size: 0.8em;
+}
+
+.button-html:hover, .button-resume a:hover {
+  background-color: #64ffda;
+  color: gray !important;
 }
 
 .left-sociaux,
@@ -531,6 +542,9 @@ strong {
     margin-top: 50px;
     margin-right: 0;
   }
+  .portrait img {
+    opacity: 1;
+  }
   .formation,
   #about-me {
     margin: 100px 0 0 0 !important;
@@ -566,6 +580,12 @@ strong {
     padding: 0 100px;
   }
 }
+@media screen and (max-width: 550px) {
+  .menu-desktop {
+    visibility: hidden;
+    display: none !important;
+  }
+}
 @media screen and (max-width: 450px) {
   main {
     padding: 0 70px;
@@ -575,10 +595,6 @@ strong {
   }
   .button-resume {
     margin-right: 20px;
-  }
-  .menu-desktop {
-    visibility: hidden;
-    display: none !important;
   }
   .icone {
     height: 100px;
