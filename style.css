@@ -229,11 +229,12 @@ header nav {
   margin-right: 100px;
 }
 .portrait img {
+  background-color: whitesmoke;
   height: 620px;
   width: 400px;
   max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 5px;
   object-fit: cover;
   opacity: 0.3;
 }
@@ -418,9 +419,6 @@ footer {
   border-radius: 5px;
 }
 
-.portfolio-content a {
-  text-align: center;
-}
 .portfolio-content a:hover {
   color: #64ffda;
 }
@@ -429,10 +427,12 @@ footer {
   opacity: 1;
 }
 .portfolio-content a {
+  opacity: 1;
+  text-align: center;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: #283655;
+  color: rgb(204, 214, 246);
 }
 
 .stage-content > ul {
@@ -484,6 +484,22 @@ footer p {
 }
 strong {
   color: #64ffda;
+}
+#technos {
+  color: #8892b0;
+  position: relative;
+}
+#technos li {
+  list-style: none;
+  margin: 10px 0 0 20px;
+}
+#technos li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #64ffda;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @keyframes fixed-opa {
